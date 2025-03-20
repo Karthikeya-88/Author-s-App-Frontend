@@ -1,0 +1,249 @@
+.editor {
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.editor.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.editor.light {
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+.editor h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: inherit;
+}
+
+.popup-content {
+  background: #ffffff !important;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content.dark {
+  background: #2a2a2a !important;
+  color: #ffffff;
+}
+
+.popup-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #777;
+}
+
+.document-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.document-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.document-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.document-form button {
+  padding: 10px 15px;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.document-form button:hover {
+  background-color: #4a148c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.document-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.document-list {
+  display: grid;
+  gap: 20px;
+}
+
+.document-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.editor.dark .document-card {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.document-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.document-card div {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.document-card .edit-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.document-card .edit-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.document-card .edit-button,
+.document-card .save-button,
+.document-card .cancel-button,
+.document-card .delete-button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.document-card .edit-button:hover,
+.document-card .save-button:hover,
+.document-card .cancel-button:hover,
+.document-card .delete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.document-card .edit-button:active,
+.document-card .save-button:active,
+.document-card .cancel-button:active,
+.document-card .delete-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.document-card .edit-button {
+  background-color: #ff8f00;
+  color: white;
+}
+
+.document-card .edit-button:hover {
+  background-color: #e65100;
+}
+
+.document-card .save-button {
+  background-color: #00c853;
+  color: white;
+}
+
+.document-card .save-button:hover {
+  background-color: #009624;
+}
+
+.document-card .cancel-button {
+  background-color: #d50000;
+  color: white;
+}
+
+.document-card .cancel-button:hover {
+  background-color: #b71c1c;
+}
+
+.document-card .delete-button {
+  background-color: #aa00ff;
+  color: white;
+}
+
+.document-card .delete-button:hover {
+  background-color: #7b1fa2;
+}
+
+@media (max-width: 768px) {
+  .editor {
+    padding: 20px;
+    min-width: 410px;
+  }
+
+  .editor h1 {
+    font-size: 2rem;
+  }
+
+  .document-form button {
+    font-size: 0.9rem;
+  }
+
+  .document-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .document-card div {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .editor {
+    padding: 10px;
+    min-width: 360px;
+  }
+
+  .editor h1 {
+    font-size: 1.5rem;
+  }
+
+  .document-form button {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .document-card h3 {
+    font-size: 1rem;
+  }
+
+  .document-card div {
+    font-size: 0.8rem;
+  }
+
+  .document-card .edit-button,
+  .document-card .save-button,
+  .document-card .cancel-button,
+  .document-card .delete-button {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+}

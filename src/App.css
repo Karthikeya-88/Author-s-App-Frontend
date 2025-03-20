@@ -7,6 +7,53 @@
   pointer-events: none;
 }
 
+h1 {
+  font-size: x-large;
+  text-align: center;
+}
+
+h2 {
+  font-size: x-large;
+}
+
+li {
+  list-style: none !important;
+}
+
+form {
+  color: #282c34;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: large;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  li {
+    list-style: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: medium;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: medium;
+  }
+
+  li {
+    list-style: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +82,127 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1pc;
+  background-color: #b2b2b2;
+  color: black;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  background-color: #b2b2b2;
+  color: black;
+  position: fixed;
+  margin-top: 0px;
+  padding-top: 0px;
+  width: 100%;
+  height: 8%;
+}
+
+.editor,
+.ideas,
+.quotes,
+.search,
+.home,
+.settings {
+  padding: 40px;
+  background-size: cover;
+  min-width: 88vw;
+}
+
+button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.user-guide h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.user-guide h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-guide ul {
+  list-style-type: disc;
+  margin-left: 1.4rem;
+}
+
+.user-guide li {
+  margin-bottom: 0.4rem;
+}
+
+.user-guide a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.user-guide a:hover {
+  text-decoration: underline;
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+  background-size: cover;
+}
+
+.settings.dark,
+.home.dark,
+.search.dark,
+.user-guide.dark,
+.editor.dark,
+.quotes.dark,
+.ideas.dark {
+  background-color: #121212;
+  color: white;
+  background-size: cover;
+}
+
+.settings.light,
+.home.light,
+.search.light,
+.user-guide.light,
+.editor.light,
+.quotes.light,
+.ideas.light {
+  background-color: white;
+  color: black;
+  background-size: cover;
 }

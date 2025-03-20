@@ -1,0 +1,273 @@
+.ideas {
+  padding: 40px;
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.ideas.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.ideas.light {
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+.ideas h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: inherit;
+}
+
+.idea-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.idea-form input,
+.idea-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.idea-form input:focus,
+.idea-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.idea-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.idea-form button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.idea-form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.idea-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.idea-list {
+  display: grid;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.idea-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.ideas.dark .idea-card {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.idea-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.idea-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.idea-card .edit-input,
+.idea-card .edit-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.idea-card .edit-input:focus,
+.idea-card .edit-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.idea-card .edit-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.idea-card .edit-button,
+.idea-card .save-button,
+.idea-card .cancel-button,
+.idea-card .delete-button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.idea-card .edit-button:hover,
+.idea-card .save-button:hover,
+.idea-card .cancel-button:hover,
+.idea-card .delete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.idea-card .edit-button:active,
+.idea-card .save-button:active,
+.idea-card .cancel-button:active,
+.idea-card .delete-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.idea-card .edit-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.idea-card .edit-button:hover {
+  background-color: #1e88e5;
+}
+
+.idea-card .save-button {
+  background-color: #ff9800;
+  color: white;
+}
+
+.idea-card .save-button:hover {
+  background-color: #fb8c00;
+}
+
+.idea-card .cancel-button {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+.idea-card .cancel-button:hover {
+  background-color: #757575;
+}
+
+.idea-card .delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.idea-card .delete-button:hover {
+  background-color: #e53935;
+}
+
+@media (max-width: 768px) {
+  .ideas {
+    padding: 20px;
+    min-width: 400px;
+  }
+
+  .ideas h1 {
+    font-size: 2rem;
+  }
+
+  .idea-form input,
+  .idea-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .idea-form button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .idea-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .idea-card p {
+    font-size: 0.9rem;
+  }
+
+  .idea-card .edit-button,
+  .idea-card .save-button,
+  .idea-card .cancel-button,
+  .idea-card .delete-button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ideas {
+    padding: 10px;
+
+    min-width: 360px;
+  }
+
+  .ideas h1 {
+    font-size: 1.5rem;
+  }
+
+  .idea-form input,
+  .idea-form textarea {
+    font-size: 0.8rem;
+  }
+
+  .idea-form button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .idea-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .idea-card p {
+    font-size: 0.8rem;
+  }
+
+  .idea-card .edit-button,
+  .idea-card .save-button,
+  .idea-card .cancel-button,
+  .idea-card .delete-button {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+
+  .idea-card {
+    padding: 15px;
+  }
+}
