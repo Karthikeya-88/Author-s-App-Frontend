@@ -1,7 +1,8 @@
 .editor {
-  padding: 20px;
+  padding: 10px;
   font-family: "Arial", sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  min-width: 386px;
 }
 
 .editor.dark {
@@ -15,7 +16,7 @@
 }
 
 .editor h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: center;
   color: inherit;
@@ -35,7 +36,7 @@
 
 .popup-content p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #777;
 }
 
@@ -47,10 +48,10 @@
 }
 
 .document-form input {
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
@@ -60,13 +61,13 @@
 }
 
 .document-form button {
-  padding: 10px 15px;
+  padding: 8px 10px;
   background-color: #6a1b9a;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
@@ -83,12 +84,12 @@
 
 .document-list {
   display: grid;
-  gap: 20px;
+  gap: 15px;
 }
 
 .document-card {
   background-color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -101,24 +102,24 @@
 }
 
 .document-card h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 10px;
   color: inherit;
 }
 
 .document-card div {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: inherit;
 }
 
 .document-card .edit-input {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 10px;
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
@@ -132,12 +133,12 @@
 .document-card .save-button,
 .document-card .cancel-button,
 .document-card .delete-button {
-  padding: 8px 12px;
-  margin-right: 10px;
+  padding: 6px 8px;
+  margin-right: 8px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
@@ -193,7 +194,7 @@
   background-color: #7b1fa2;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .editor {
     padding: 20px;
     min-width: 410px;
@@ -203,47 +204,43 @@
     font-size: 2rem;
   }
 
-  .document-form button {
-    font-size: 0.9rem;
-  }
-
-  .document-card h3 {
-    font-size: 1.25rem;
-  }
-
-  .document-card div {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .editor {
+  .document-form input {
     padding: 10px;
-    min-width: 360px;
-  }
-
-  .editor h1 {
-    font-size: 1.5rem;
-  }
-
-  .document-form button {
-    font-size: 0.8rem;
-    padding: 8px 10px;
-  }
-
-  .document-card h3 {
     font-size: 1rem;
   }
 
+  .document-form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .document-card {
+    padding: 20px;
+  }
+
+  .document-card h3 {
+    font-size: 1.5rem;
+  }
+
   .document-card div {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .document-card .edit-button,
   .document-card .save-button,
   .document-card .cancel-button,
   .document-card .delete-button {
-    padding: 6px 8px;
-    font-size: 0.8rem;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .editor {
+    padding: 30px;
+  }
+
+  .document-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

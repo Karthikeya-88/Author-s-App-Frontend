@@ -1,7 +1,8 @@
 .ideas {
-  padding: 40px;
+  padding: 10px;
   font-family: "Arial", sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  min-width: 386px;
 }
 
 .ideas.dark {
@@ -15,8 +16,8 @@
 }
 
 .ideas h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
   text-align: center;
   color: inherit;
 }
@@ -32,10 +33,10 @@
 
 .idea-form input,
 .idea-form textarea {
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
@@ -47,17 +48,17 @@
 
 .idea-form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 80px;
 }
 
 .idea-form button {
-  padding: 10px 15px;
+  padding: 6px 10px;
   background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
@@ -74,14 +75,14 @@
 
 .idea-list {
   display: grid;
-  gap: 20px;
+  gap: 15px;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .idea-card {
   background-color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -94,25 +95,25 @@
 }
 
 .idea-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   color: inherit;
 }
 
 .idea-card p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: inherit;
 }
 
 .idea-card .edit-input,
 .idea-card .edit-textarea {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 10px;
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
@@ -125,19 +126,19 @@
 
 .idea-card .edit-textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 80px;
 }
 
 .idea-card .edit-button,
 .idea-card .save-button,
 .idea-card .cancel-button,
 .idea-card .delete-button {
-  padding: 8px 12px;
-  margin-right: 10px;
+  padding: 5px 8px;
+  margin-right: 8px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
@@ -193,10 +194,9 @@
   background-color: #e53935;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 480px) {
   .ideas {
     padding: 20px;
-    min-width: 400px;
   }
 
   .ideas h1 {
@@ -206,11 +206,20 @@
   .idea-form input,
   .idea-form textarea {
     font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .idea-form textarea {
+    min-height: 100px;
   }
 
   .idea-form button {
     font-size: 0.9rem;
     padding: 8px 12px;
+  }
+
+  .idea-card {
+    padding: 20px;
   }
 
   .idea-card h3 {
@@ -219,6 +228,16 @@
 
   .idea-card p {
     font-size: 0.9rem;
+  }
+
+  .idea-card .edit-input,
+  .idea-card .edit-textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .idea-card .edit-textarea {
+    min-height: 100px;
   }
 
   .idea-card .edit-button,
@@ -230,44 +249,43 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   .ideas {
-    padding: 10px;
-
-    min-width: 360px;
+    padding: 40px;
   }
 
   .ideas h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .idea-form input,
   .idea-form textarea {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .idea-form button {
-    font-size: 0.8rem;
-    padding: 6px 10px;
+    font-size: 1rem;
+    padding: 10px 15px;
   }
 
   .idea-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .idea-card p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .idea-card .edit-input,
+  .idea-card .edit-textarea {
+    font-size: 1rem;
   }
 
   .idea-card .edit-button,
   .idea-card .save-button,
   .idea-card .cancel-button,
   .idea-card .delete-button {
-    font-size: 0.7rem;
-    padding: 5px 8px;
-  }
-
-  .idea-card {
-    padding: 15px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }

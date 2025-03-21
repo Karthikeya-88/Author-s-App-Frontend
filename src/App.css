@@ -1,19 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 h1 {
-  font-size: x-large;
+  font-size: medium;
   text-align: center;
 }
 
 h2 {
-  font-size: x-large;
+  font-size: medium;
 }
 
 li {
@@ -22,72 +23,6 @@ li {
 
 form {
   color: #282c34;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: large;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: large;
-  }
-
-  li {
-    list-style: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: medium;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: medium;
-  }
-
-  li {
-    list-style: none !important;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 .navbar {
@@ -100,14 +35,14 @@ body {
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
   text-decoration: none;
 }
 
 .navbar-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .nav-link {
@@ -132,9 +67,10 @@ body {
 .search,
 .home,
 .settings {
-  padding: 40px;
+  padding: 20px;
   background-size: cover;
   min-width: 88vw;
+  min-height: 90vh !important;
 }
 
 button {
@@ -144,12 +80,12 @@ button {
 }
 
 .user-guide h1 {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
 .user-guide h2 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -205,4 +141,74 @@ body.dark {
   background-color: white;
   color: black;
   background-size: cover;
+}
+
+@media (min-width: 480px) {
+  h1 {
+    font-size: large;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .editor,
+  .ideas,
+  .quotes,
+  .search,
+  .home,
+  .settings {
+    padding: 30px;
+  }
+
+  .user-guide h1 {
+    font-size: 1.8rem;
+  }
+
+  .user-guide h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: x-large;
+  }
+
+  h2 {
+    font-size: x-large;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem;
+  }
+
+  .editor,
+  .ideas,
+  .quotes,
+  .search,
+  .home,
+  .settings {
+    padding: 40px;
+  }
+
+  .user-guide h1 {
+    font-size: 2.2rem;
+  }
+
+  .user-guide h2 {
+    font-size: 1.6rem;
+  }
 }

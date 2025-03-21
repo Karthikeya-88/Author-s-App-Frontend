@@ -4,13 +4,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   color: #fff;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   font-family: "Merriweather", serif;
   transition: all 0.5s ease;
+  min-width: 376px;
 }
 
 .home.dark {
@@ -28,14 +29,14 @@
 }
 
 .home h1 {
-  font-size: 4rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   color: #fff;
 }
 
 .home p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0.5rem 0 2rem;
   max-width: 700px;
   line-height: 1.6;
@@ -44,7 +45,7 @@
 
 .quote {
   margin-top: 2rem;
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-style: italic;
   color: gold;
   text-shadow: 4px -2px #003e2e;
@@ -52,15 +53,16 @@
 
 .author {
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: bold;
   opacity: 0.7;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 480px) {
   .home {
-    min-width: 400px;
+    padding: 20px;
   }
+
   .home h1 {
     font-size: 2.2rem;
   }
@@ -75,22 +77,17 @@
   }
 }
 
-@media (max-width: 480px) {
-  .home {
-    padding: 15px;
-    min-width: 360px;
-  }
-
+@media (min-width: 768px) {
   .home h1 {
-    font-size: 1.8rem;
+    font-size: 4rem;
   }
 
   .home p,
   .quote {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .author {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }
