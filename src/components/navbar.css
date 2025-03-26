@@ -2,10 +2,8 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  width: 97%;
+  width: 99.8%;
   min-width: 390px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 
 .navbar-brand {

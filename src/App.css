@@ -68,9 +68,8 @@ form {
 .home,
 .settings {
   padding: 20px;
-  background-size: cover;
-  min-width: 88vw;
-  min-height: 90vh !important;
+  min-height: 99vh !important;
+  max-height: 120% !important;
 }
 
 button {

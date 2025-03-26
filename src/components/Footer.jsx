@@ -32,9 +32,6 @@ const Footer = () => {
           </a>
         </button>
       </div>
-      <div className="footer">
-        <p>© 2025 Author's Isolation. All rights reserved.</p>
-      </div>
     </div>
   );
 };

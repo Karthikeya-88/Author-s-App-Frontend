@@ -5,16 +5,6 @@ import "./settings.css";
 
 const Settings = () => {
   const { darkMode, toggleTheme } = useTheme();
-  const [fontSize, setFontSize] = useState(16);
-
-  const handleFontSizeChange = (event) => {
-    const newSize = parseInt(event.target.value, 10);
-    setFontSize(newSize);
-    document.documentElement.style.setProperty(
-      "--user-font-size",
-      `${newSize}px`
-    );
-  };
 
   return (
     <div className={`settings ${darkMode ? "dark" : "light"}`}>
@@ -32,14 +22,16 @@ const Settings = () => {
           {darkMode ? <FaSun size={24} /> : <FaMoon size={24} />}
         </button>
       </div>
-      <div className={`user-guide ${darkMode ? "dark" : "light"}`}>
+      <div
+        style={{ paddingTop: "10px", marginTop: "10px", marginBottom: "10px" }}
+      >
         <h4>User Guide</h4>
         <p style={{ marginTop: "0px" }}>
           Welcome to the Writer's App! Here's how you can use the application:
         </p>
 
         <h5>1. Getting Started</h5>
-        <ul style={{ fontSize: "small" }}>
+        <ul style={{ fontSize: "small", padding: "20px" }}>
           <li>
             <strong>Home Page:</strong> Navigate to the home page for a quick
             overview of the app.
@@ -47,7 +39,7 @@ const Settings = () => {
         </ul>
 
         <h5>2. Writing Documents</h5>
-        <ul style={{ fontSize: "small" }}>
+        <ul style={{ fontSize: "small", padding: "20px" }}>
           <li>
             <strong>Create a Document:</strong> Go to the{" "}
             <strong>Editor</strong> page to start writing. Use the rich text
@@ -64,7 +56,7 @@ const Settings = () => {
         </ul>
 
         <h5>3. Managing Ideas</h5>
-        <ul style={{ fontSize: "small" }}>
+        <ul style={{ fontSize: "small", padding: "20px" }}>
           <li>
             <strong>Add Ideas:</strong> Go to the <strong>Ideas</strong> page to
             jot down quick ideas or plot points.
@@ -76,7 +68,7 @@ const Settings = () => {
         </ul>
 
         <h5>4. Quote Library</h5>
-        <ul style={{ fontSize: "small" }}>
+        <ul style={{ fontSize: "small", padding: "20px" }}>
           <li>
             <strong>Save Quotes:</strong> Go to the <strong>Quotes</strong> page
             to save inspiring quotes.
@@ -88,7 +80,7 @@ const Settings = () => {
         </ul>
 
         <h5>5. Search Functionality</h5>
-        <ul style={{ fontSize: "small" }}>
+        <ul style={{ fontSize: "small", padding: "20px" }}>
           <li>
             <b>Global Search:</b> Use the <strong>Search</strong> page to find
             documents, ideas, or quotes across the app.
@@ -96,7 +88,7 @@ const Settings = () => {
         </ul>
 
         <h4>Need Help?</h4>
-        <p style={{ fontSize: "small" }}>
+        <p style={{ fontSize: "small", padding: "20px" }}>
           If you have any questions or need assistance, please contact me at{" "}
           <a href="mailto:dkarthikeya888@gmail.com">
             support@author'sisolation.com
